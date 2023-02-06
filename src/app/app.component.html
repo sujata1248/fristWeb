@@ -24,48 +24,133 @@
   h5,
   h6 {
     margin-right: 120px;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-left: 30px;
   }
 
   .spacer {
-    flex: 1;
+    flex: 1 1 auto;
   }
 
   .container img {
     margin: 18px 18px;
   }
 
-  .container {
+  
+
+  .container{
     display: flex;
-    border-color: #185b9e;
     flex-wrap: wrap;
-    width: 50%;
+    width: 500px;
     background-color: rgb(189, 207, 247);
+    
+  }
+
+  .booklist{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    background-color: rgb(189, 207, 247);
+    border-style: solid;
+    border-color:#185b9e ;
+    
+  }
+
+
+  .content {
+    width: 500px;
+    background-color: rgb(189, 207, 247);
+    border-style: solid;
+    border-color: #185b9e;
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  mat-card.card {
+    width: 25%;
+  }
+
+  table {
+    width: 400px;
+
   }
 </style>
 
-<div class="container">
-  <img src="../assets/images/user.png" alt="" style="width:80px; height: 80px;">
-  <div class="spacer"></div>
-  <h3>Name:Divya
 
-  </h3>
+<div class="content">
 
-  <div class="spacer"></div>
-  
-  <img src="../assets/images/cancel.png" alt="" style="width:40px; height: 40px;">
+  <mat-toolbar>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of [1,2,3,4,5,6,7]">
+        <div class="container">
 
-  <div class="card" style=" width :40%; border-color: #185b9e;">
-    
-  
+          <img src="../assets/images/user.png" alt="" style="width:80px; height: 80px;">
+
+          <div class="spacer"></div>
+          <dl>
+            <dt>Name:Divya chimane</dt>
+            <dt>Age:21</dt>
+
+          </dl>
+
+          <div class="spacer"></div>
+          <div class="spacer"></div>
+          <div class="spacer"></div>
+
+          <img src="../assets/images/cancel.png" alt="" style="width: 30px; height: 30px;">
+
+
+        </div>
+      </div>
+    </div>
+  </mat-toolbar>
+
+
+
+  <div class="booklist">
+    <table>
+      <tr>
+        <td>
+          <mat-card class="card">
+            <div fxLayout="row wrap" fxLayoutGap="16px grid">
+              <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of [1,2,3,4,5,6,7]">
+
+                <ol>
+                  <li>Marathi</li>
+                  <br>
+                  <li>English</li>
+                  <br>
+                  <li>Maths</li>
+                </ol>
+
+              </div>
+            </div>
+          </mat-card>
+        </td>
+        <td></td>
+        <td></td>
+        <td>
+          <mat-card class="card">
+            <div fxLayout="row wrap" fxLayoutGap="16px grid">
+              <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of [1,2,3,4,5,6,7]">
+
+
+                <img src="../assets/images/book.png">
+
+                <h3>PASS</h3>
+              </div>
+            </div>
+          </mat-card>
+        </td>
+      </tr>
+    </table>
   </div>
-</div>
-
-
-<div class="container" role="main">
-
- 
-
 
 </div>
 
